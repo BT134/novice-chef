@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Novice Chef</title>
+  <title>Novice Chef Search Results</title>
 </head>
 
 <body>
@@ -19,10 +19,16 @@
         <div class="navbar-fixed">
             <nav class="black">
               <div class="nav-wrapper">
-                <div class="brand-logo">Novice Chef</div>
-                <ul class="right hide-on-med-and-down">
+                <div class="brand-logo" id="brand-logo">Novice Chef</div>
+                <ul class="right hide-on-med-and-down" id="links">
+                  <li>
+                      <div class="input-field">
+                      <input placeholder="Search again...." id="first_name" type="text" class="validate white-text">
+                      <input id="search" type="search" required>
+                      </div>
+                  </li>
+                  <li><a href="">Search</a></li>
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="badges.html">Search</a></li>
                 </ul>
               </div>
             </nav>
@@ -30,7 +36,26 @@
     </header>
 
     <main>
-
+      <br>
+      <br>
+      <div class="row">
+        <div class="col s7 offset-s1">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Recipe 1</span>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="col s1">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Photo</span>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -31,6 +31,23 @@ footer {
     width:100%;
     height:60px;
     font-size: 120%;
- }
+}
  
+#brand-logo {
+    padding-left: 30px;
+}
+
+#links {
+    padding-right: 20px;
+}
+
+#recipe-name {
+    justify-content: center;
+    text-align: center;   
+}
+
+h2 {
+    font-size: 400%;
+    font-weight: 300;
+}
  /* style */
