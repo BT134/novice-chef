@@ -34,7 +34,8 @@ function queryMeals(searchParams) {
 function printResults(searchedMeals) {
     console.log(searchedMeals);
 
-    
+
 }
+
 
 getParams();

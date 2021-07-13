@@ -54,5 +54,6 @@ function searchRandomMeal(event) {
 // randomMeal();
 
 
+
 searchBtn.on("click", getSearchItem);
 randomBtn.on("click", searchRandomMeal);
