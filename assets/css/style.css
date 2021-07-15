@@ -52,6 +52,7 @@ h2 {
     font-weight: 300;
 }
 
+<<<<<<< HEAD
 .photo-div img {
     width: 100%;
     max-width: 500px;
@@ -74,4 +75,21 @@ h2 {
 #measurement-list {
     padding-left: 20px;
 }
+=======
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+  
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+>>>>>>> main
  /* style */
