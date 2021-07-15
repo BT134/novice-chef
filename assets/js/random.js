@@ -22,6 +22,7 @@ function randomMeal(event) {
 randomMeal();
 
 
+
 function searchRandomMeal() {
 
     var querystring = "./random.html"
