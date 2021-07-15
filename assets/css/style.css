@@ -1,10 +1,11 @@
 :root {
     box-sizing: border-box;
-
 }
 
 body {
     font-family: 'Lobster', cursive;
+    background-image: url("https://scx2.b-cdn.net/gfx/news/hires/2016/howcuttingdo.jpg");
+    background-color: white;
 }
 
 .header-p {

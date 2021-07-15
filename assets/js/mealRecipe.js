@@ -73,11 +73,6 @@ async function execute() {
         var topResult = response.result.items[0].id.videoId;
         console.log(topResult);
 
-<<<<<<< HEAD
-        // Creates an array containing the response object values
-        let recipeArr = Object.values(response.meals[0]);
-        console.log(recipeArr);
-=======
         player.loadVideoById(topResult);
                   
         },
@@ -86,7 +81,6 @@ async function execute() {
 }
 
 window.onload = execute
->>>>>>> 0b43b53f514afc82971f09177ad89e1521b95530
 
 });
 }
