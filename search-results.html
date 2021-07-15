@@ -20,12 +20,11 @@
         <div class="navbar-fixed">
             <nav class="black">
               <div class="nav-wrapper">
-                <div class="brand-logo" id="brand-logo">Novice Chef</div>
+                <div class="brand-logo" id="brand-logo"><a href="index.html">Novice Chef</a></div>
                 <ul class="right hide-on-med-and-down" id="links">
                   <li>
                       <div class="input-field">
                       <input placeholder="Search again...." id="first_name" type="text" class="validate white-text">
-                      <input id="search" type="search" required>
                       </div>
                   </li>
                   <li><a id="search-btn">Search</a></li>
@@ -37,10 +36,15 @@
     </header>
 
     <main>
-      <br>
-      <br>
-      <h2>Showing results for: <span id="searchTerm"></span></h2>
+      <h2><span id="searchTerm"></span> is incredible</h2>
       <div class="row" id="results"></div>
+
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <h4>Invalid Search</h4>
+          <p>Unfortunately we have no recipes of this nature, please search again.</p>
+        </div>
+      </div>
     </main>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

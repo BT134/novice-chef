@@ -32,7 +32,6 @@ function queryMeals(searchParams) {
         cookingInstructions.html(response.meals[0].strInstructions);
         recipePhoto.html("<img src=" + response.meals[0].strMealThumb + ">");
 
-
         // Creates an array containing the response object values
         let recipeArr = Object.values(response.meals[0]);
         console.log(recipeArr);
