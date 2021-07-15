@@ -1,5 +1,5 @@
 const searchString = keyword.input.value;
-const topResult = "";
+const topResult = '';
 
 // Function to fetch API for youtube
 async function loadClient() {
@@ -17,7 +17,7 @@ async function execute() {
     "type": 'video',
     "maxResults": 5,
     "order": "viewCount",
-    "q": searchString
+    "q": searchParams
   })
     .then(function (response) {
       // Handle the results here (response.result has the parsed body).
@@ -27,8 +27,6 @@ async function execute() {
 }
 
 gapi.load("client", loadClient);
-
-window.onload = execute
 
 // Function to load Youtube video into recipe page
 var tag = document.createElement('script');
@@ -57,4 +55,4 @@ function onPlayerReady(event) {
   event.target.playVideo();
 }
 
-
+window.onload = execute
