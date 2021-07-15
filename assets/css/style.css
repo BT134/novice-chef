@@ -50,9 +50,9 @@ footer {
 h2 {
     font-size: 400%;
     font-weight: 300;
+    text-align: center;
 }
 
-<<<<<<< HEAD
 .photo-div img {
     width: 100%;
     max-width: 500px;
@@ -64,18 +64,17 @@ h2 {
     height: auto;
 }
 
-.list {
-    display: inline-block;
+#recipe-photo {
+    margin-top: 7px;
 }
 
-#ingredient-list {
-    margin-right: px;
+.list {
+    display: inline-block;
 }
 
 #measurement-list {
     padding-left: 20px;
 }
-=======
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -91,5 +90,8 @@ h2 {
     height: 100%;
 }
 
->>>>>>> main
+#hidden {
+    display: none
+}
+
  /* style */
