@@ -13,7 +13,9 @@ function getParams() {
 
     queryMeals(searchParams);
 
-    searchTerm.html(searchParams);
+    let upper = searchParams.toUpperCase();
+
+    searchTerm.html(upper);
 }
 
 // Fetches the results for the searched term
@@ -30,8 +32,11 @@ function queryMeals(searchParams) {
     .then(function(response) {
         console.log(response);
 
-        if(!response.meals.length) {
-            // add in a modula
+        if(response.meals === null) {
+
+            let modal = $("#modal");
+            modal.css("display", "block");            
+
             console.log("We have no recipes of this nature, please search again");
         } else {
             for (var i=0; i<response.meals.length; i++) {
@@ -45,10 +50,10 @@ function queryMeals(searchParams) {
 function printResults(searchedMeals) {
     console.log(searchedMeals);
     let row = $("<div class='row'>");
-    let recipes = $("<div class='col s4 offset-s1 card blue-grey darken-1 card content white-text'>");
+    let recipes = $("<div class='col s2 offset-s2 card blue-grey darken-1 white-text'>");
     let recipeTitle = $("<span class='card-title' id='recipe-name'>");
-    let photoDiv = $("<div class='photo-div col s4 card card-content'>");
-    let recipePhoto = $("<span class='card-title'>");
+    let photoDiv = $("<div class='photo-div col s6 card-content'>");
+    let recipePhoto = $("<span>");
     let recipeLink = $("<a href='recipe.html?q=" + searchedMeals.idMeal + "'>");
 
     let photoURL = searchedMeals.strMealThumb;
