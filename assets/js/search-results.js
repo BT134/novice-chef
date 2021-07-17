@@ -1,10 +1,13 @@
 var container = $("#results");
 var searchTerm = $("#searchTerm");
 var searchBtn = $("#search-btn");
+var clearBtn = $("#clear-btn");
 var searchText = $("#first_name");
 var meal = "";
 var mealRecipe = $("#recipeLink");
 var recipeName = $("#recipe-name");
+var savedSearches = [];
+var historyList = $("#search-list");
 
 // Get the search item from the URL
 function getParams() {
@@ -43,6 +46,23 @@ function queryMeals(searchParams) {
                 printResults(response.meals[i]);
             }
         }
+
+        if (response.meals !== null){
+            savedSearches = JSON.parse(localStorage.getItem("meal"));
+            console.log(savedSearches);
+            if (savedSearches === null) {
+                savedSearches = [];
+                savedSearches.push(searchParams.toUpperCase());
+                localStorage.setItem("meal", JSON.stringify(savedSearches));
+                addToList(searchParams);
+            } else {
+                if (find(searchParams) > 0) {
+                    savedSearches.push(searchParams.toUpperCase());
+                    localStorage.setItem("meal", JSON.stringify(savedSearches));
+                    addToList(searchParams);
+                }
+            }
+        }
     });
 }
 
@@ -51,7 +71,7 @@ function printResults(searchedMeals) {
     console.log(searchedMeals);
     let row = $("<div class='row'>");
     let recipes = $("<div class='col s2 offset-s2 card blue-grey darken-1 white-text'>");
-    let recipeTitle = $("<span class='card-title' id='recipe-name'>");
+    let recipeTitle = $("<h3 id='recipe-name'>");
     let photoDiv = $("<div class='photo-div col s6 card-content'>");
     let recipePhoto = $("<span>");
     let recipeLink = $("<a href='recipe.html?q=" + searchedMeals.idMeal + "'>");
@@ -100,8 +120,44 @@ function goToRecipe(event) {
 
 }
 
+// Add the searched term to the search history list
+function addToList(m) {
+    let list = $("<li>" + m.toUpperCase() + "</li>");
+    list.attr("data-value", m.toUpperCase());
+    historyList.append(list);
+}
+
+// Display the search when it is clicked on from the search history list
+function pastSearch(event) {
+    var liEl = event.target;
+    if (event.target.matches("li")){
+        searchParams = liEl.textContent.trim();
+        queryMeals(searchParams);
+    }
+}
+
+// Clear the search history
+function clearHistory(event){
+    event.preventDefault();
+    savedSearches = [];
+    localStorage.removeItem("meal");
+    document.location.reload();
+}
+
+// Searches for if the search is already saved
+function find(m){
+    for (var i=0; i<savedSearches.length; i++){
+        if (m.toUpperCase() === savedSearches[i]){
+            return -1;
+        }
+    }
+    return 1;
+}
+
 // Click handlers
 searchBtn.on("click", getSearchItem);
 mealRecipe.on("click", goToRecipe);
+clearBtn.on("click", clearHistory);
+$(document).on("click", pastSearch);
 
 getParams();
