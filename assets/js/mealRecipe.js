@@ -103,7 +103,6 @@ function printMeasurements(measurements) {
 
 getParams();
 
-
 // Function to load Youtube video into recipe page
 var tag = document.createElement('script');
 
@@ -128,8 +127,10 @@ function onYouTubeIframeAPIReady() {
      
 };
 
+
 function onPlayerReady(event) {
     event.target.playVideo();
 }
+
 
 setTimeout(() => {$('#hidden').show();}, 3000)

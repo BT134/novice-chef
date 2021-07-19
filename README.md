@@ -43,10 +43,10 @@ BY searching and selecting a recipe from the Meal DB where Iâ€™m also shown a â€
 
 ## Authors
 
-> Brenton Turnor - [https://github.com/BT134](https://github.com/BT134)
-> Blake Georgeff - [https://github.com/BlakeGeo](https://github.com/BlakeGeo)
-> Simone Colton - [https://github.com/simonecolton](https://github.com/simonecolton)
-> Sean Bettoni - [https://github.com/Sean-Bettoni](https://github.com/Sean-Bettoni)
+> * Brenton Turnor - [https://github.com/BT134](https://github.com/BT134)
+> * Blake Georgeff - [https://github.com/BlakeGeo](https://github.com/BlakeGeo)
+> * Simone Colton - [https://github.com/simonecolton](https://github.com/simonecolton)
+> * Sean Bettoni - [https://github.com/Sean-Bettoni](https://github.com/Sean-Bettoni)
 
 ## Project Status
 
