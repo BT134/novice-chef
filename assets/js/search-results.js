@@ -70,9 +70,9 @@ function queryMeals(searchParams) {
 function printResults(searchedMeals) {
     console.log(searchedMeals);
     let row = $("<div class='row'>");
-    let recipes = $("<div class='col s2 offset-s2 card blue-grey darken-1 white-text'>");
+    let recipes = $("<div class='col s4 offset-s2 card blue-grey darken-1 white-text'>");
     let recipeTitle = $("<h3 id='recipe-name'>");
-    let photoDiv = $("<div class='photo-div col s6 card-content'>");
+    let photoDiv = $("<div class='photo-div col s4 card-content'>");
     let recipePhoto = $("<span>");
     let recipeLink = $("<a href='recipe.html?q=" + searchedMeals.idMeal + "'>");
 
